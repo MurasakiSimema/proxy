@@ -6,6 +6,7 @@ file_put_contents("test.txt", json_encode($_POST));
 $payload="";
 foreach ($_POST as $key => $value):
   $payload = $payload . $key . "=" . $value . "&";
+endforeach;
 
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
