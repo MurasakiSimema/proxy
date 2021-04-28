@@ -11,7 +11,7 @@ $post = [
 ];
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt( $ch, CURLOPT_POSTFIELDS, $post );
-curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
 # Return response instead of printing.
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 # Send request.
