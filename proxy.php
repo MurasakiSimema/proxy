@@ -3,7 +3,9 @@ $url = "http://extra.isii.it:40081/donatori/paypal/payments.php";
 $ch = curl_init( $url );
 # Setup request to send json via POST.
 file_put_contents("test.txt", json_encode($_POST));
-$payload = json_encode($_POST);
+$payload="";
+foreach ($_POST as $key => $value):
+  $payload = $payload . $key . "=" . $value . "&";
 
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
