@@ -6,7 +6,7 @@ file_put_contents("test.txt", json_encode($_POST));
 $payload = $_POST;
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
-curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 # Return response instead of printing.
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 # Send request.
